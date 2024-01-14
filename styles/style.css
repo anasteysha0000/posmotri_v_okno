@@ -3,11 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
-
 html {
   block-size: 100%;
 }
-
 .page {
   display: flex;
   inline-size: 1200px;
@@ -279,7 +277,7 @@ li:not(:last-child) {
   outline-style: 1px solid #FFF;
   outline-offset: 2px;
 }
-.visually-hidden {
+.visually-hidden{
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
