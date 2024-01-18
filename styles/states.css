@@ -24,7 +24,7 @@
 }
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: -3px;
+  outline-offset: -2px;
 }
 .content__card-link:active {
   background: #545050;
