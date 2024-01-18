@@ -166,7 +166,7 @@ ol {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
-.search-form__checkbox-list > .search-form__label:hover {
+.search-form__label-text:hover {
   /*Этот селектор применяет стили к метке (label), которая находится внутри списка флажков (checkbox-list) в элементе с классом "search-form". */
   text-decoration: underline;
   text-underline-offset: 3px;
