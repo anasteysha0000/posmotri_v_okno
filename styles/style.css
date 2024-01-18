@@ -9,6 +9,7 @@ html {
 .page {
   display: flex;
   inline-size: 1200px;
+  justify-content: center;
   align-items: center;
   block-size: 100%;
   margin: auto;
@@ -30,18 +31,15 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-
 ul,
 ol {
   list-style: none;
 }
-
 .content {
   display: flex;
-  inline-size: 1140px;
+  width: 1140px;
   flex-direction: row;
   gap: 30px;
-  padding: 134px 30px;
 }
 .content__list {
   position: relative;
@@ -54,7 +52,7 @@ ol {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 21px;
 }
 .content__list-item {
   position: relative;
@@ -66,8 +64,9 @@ ol {
 }
 .content__video-card-thumbnail {
   min-width: 194px;
-  block-size: 103px;
+  height: 103px;
   object-fit: cover;
+  object-position: center;
 }
 .content__video-card-description-container {
   position: relative;
@@ -80,10 +79,11 @@ ol {
   text-decoration: none;
   color: #fff;
   display: block;
+  padding: 2px;
 }
 .title {
   color: #fff;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -92,7 +92,7 @@ ol {
 }
 .content__accent {
   color: #545050;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -101,7 +101,7 @@ ol {
 }
 .content__video-card-title {
   color: #fff;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -110,7 +110,7 @@ ol {
 }
 .content__video-card-description {
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -166,7 +166,8 @@ ol {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
-.search-form__label-text:hover {
+.search-form__checkbox-list > .search-form__label:hover {
+  /*Этот селектор применяет стили к метке (label), которая находится внутри списка флажков (checkbox-list) в элементе с классом "search-form". */
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -184,7 +185,6 @@ ol {
   border-bottom: 1px solid #fff;
   border-right: transparent;
   border-left: transparent;
-  cursor: pointer;
   width: 225px;
   height: 27px;
   gap: 10px;
@@ -196,34 +196,21 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
 }
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.search-form__textfield:has(:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-right: transparent;
-  border-left: transparent;
-}
 .search-form__textfield:focus {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-right: transparent;
-  border-left: transparent;
-}
-.search-form__textfield:active {
-  border: 1px solid #fff;
   outline: none;
+}
+.search-form__label:active {
+  outline: 1px solid #fff;
 }
 .search-form__checkbox-list {
   display: flex;
@@ -272,6 +259,7 @@ ol {
 }
 .more-button {
   inline-size: 100%;
+  padding: 2px;
 }
 .button:active {
   background-color: #545050;
@@ -280,12 +268,11 @@ ol {
   text-decoration: underline;
 }
 .button:focus {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline: none;
 }
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: -3px;
 }
 .visually-hidden {
   position: absolute;
@@ -296,22 +283,17 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-.content__video-card:active {
+.content__card-link:active {
   background: #545050;
 }
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 .content__card-link:focus {
-  outline: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  outline: none;
 }
 .content__card-link:focus-visible {
-  outline: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border: 1px solid #fff;
 }
 .content__card-link_current {
   background: #545050;
