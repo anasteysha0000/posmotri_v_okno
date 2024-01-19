@@ -13,6 +13,9 @@
   border: none;
   outline: 1px solid #fff;
 }
+.search-form__textfield:hover {
+  cursor: text;
+}
 .button:active {
   background-color: #545050;
 }
